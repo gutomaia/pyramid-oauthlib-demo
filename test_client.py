@@ -9,8 +9,8 @@ import requests
 app = Flask(__name__)
 
 OAUTH_DOMAIN = 'http://localhost:8888'
-OAUTH_BASEPATH = '/oauth2'
-OAUTH_PATH = '%s/%s' % (OAUTH_DOMAIN, OAUTH_BASEPATH)
+OAUTH_BASEPATH = '/oauth'
+OAUTH_PATH = OAUTH_DOMAIN + OAUTH_BASEPATH
 
 oauth_client = OAuth()
 gutonet = oauth_client.remote_app('gutonet',
