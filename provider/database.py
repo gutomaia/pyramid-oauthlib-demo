@@ -8,6 +8,21 @@ def add_fixtures():
     admin_group = Group(name='admin')
     DBSession.add(admin_group)
 
+
+    client = Client(
+        name='gutonet',
+        client_id='8aad3a18abb1f2baa9e8',
+        client_secret='e46cf7c82a4e4dff8ccb89af06aeeda2af6fc759',
+        is_confidential=True,
+        _redirect_uris='localhost:8888',
+        _default_scopes='email'
+        )
+
+    DBSession.add(client)
+
+
+
+
     # for group in ('admin', 'moderator'):
     #     DBSession.add(Group(name=group))
 
